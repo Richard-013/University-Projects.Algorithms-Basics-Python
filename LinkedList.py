@@ -48,5 +48,12 @@ class LinkedList(object):
         if index > self.count-1:
             return
 
-    
+    def printList(self):
+        currentNode = self.head
+        if currentNode == None:
+            print("List is empty")
+        else:
+            while(currentNode != None):
+                print("Node:", currentNode.getValue())
+                currentNode = currentNode.getNextNode()
         
