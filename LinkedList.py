@@ -28,7 +28,7 @@ class LinkedList(object):
 
     def getNodeCount(self):
         '''Gets the number of nodes in the list'''
-        return self.count
+        return self.nodeCount
 
     def insertNode(self, nodeData):
         '''Inserts new node at the head of the list'''
