@@ -32,7 +32,7 @@ class LinkedList(object):
 
     def insertNode(self, nodeData):
         '''Inserts new node at the head of the list'''
-        newNode = Node(data)
+        newNode = Node(nodeData)
         newNode.setNextNode(self.head)
         self.head = newNode
         self.nodeCount += 1
