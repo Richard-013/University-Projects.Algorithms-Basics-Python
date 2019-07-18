@@ -87,17 +87,18 @@ testList.insertNode(1)
 testList.insertNode(43)
 testList.printList()
 
-print("TEST SET 1 --------------------------------")
+print("\nTEST SET 1 --------------------------------\n")
 
 print("Node Count:", testList.getNodeCount())
 print("Search for 45:", testList.searchList(45))
 print("Search for 900:", testList.searchList(900))
 
-print("\nTEST SET 2 --------------------------------")
+print("\nTEST SET 2 --------------------------------\n")
 
 print("Node Count:", testList.getNodeCount())
 print("Search for 45:", testList.searchList(12))
-print("Attempting to delete 12")
+print("Attempting to delete 12 at index 2")
+testList.deleteAt(2)
 print("Node Count:", testList.getNodeCount())
 print("Search for 45:", testList.searchList(12))
 testList.printList()
