@@ -14,7 +14,7 @@ class Node(object):
     def getNextNode(self):
         return self.nextNode
 
-    def setNext(self, newNext):
+    def setNextNode(self, newNext):
         self.nextNode = newNext
 
 class LinkedList(object):
@@ -27,6 +27,8 @@ class LinkedList(object):
 
     def insertNode(self, nodeData):
         newNode = Node(data)
+        newNode.setNextNode(self.head)
+        self.head = newNode
 
     def searchList(self, target):
         currentNode = self.head
