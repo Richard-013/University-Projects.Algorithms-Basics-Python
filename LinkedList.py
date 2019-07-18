@@ -56,6 +56,17 @@ class LinkedList(object):
         '''Deletes a node at a given index in the list'''
         if index > self.count-1:
             return
+        if index == 0:
+            self.head = self.head.getNextNode() #Deletes the head (index 0)
+        else:
+            count = 0
+            currentNode = self.head
+            while count < index - 1:
+                currentNode = currentNode.getNextNode()
+                count += 1
+
+            currentNode.setNextNode(currentNode.getNextNode().getNextNode())
+            self.count -= 1
 
     def printList(self):
         '''Prints the whole list'''
