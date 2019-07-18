@@ -78,3 +78,27 @@ class LinkedList(object):
                 print("Node:", currentNode.getValue())
                 currentNode = currentNode.getNextNode()
         
+
+testList = LinkedList()
+testList.insertNode(45)
+testList.insertNode(87)
+testList.insertNode(12)
+testList.insertNode(1)
+testList.insertNode(43)
+testList.printList()
+
+print("TEST SET 1 --------------------------------")
+
+print("Node Count:", testList.getNodeCount())
+print("Search for 45:", testList.searchList(45))
+print("Search for 900:", testList.searchList(900))
+
+print("\nTEST SET 2 --------------------------------")
+
+print("Node Count:", testList.getNodeCount())
+print("Search for 45:", testList.searchList(12))
+print("Attempting to delete 12")
+print("Node Count:", testList.getNodeCount())
+print("Search for 45:", testList.searchList(12))
+testList.printList()
+
