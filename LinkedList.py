@@ -54,7 +54,7 @@ class LinkedList(object):
 
     def deleteAt(self, index):
         '''Deletes a node at a given index in the list'''
-        if index > self.count-1:
+        if index > self.nodeCount-1:
             return
         if index == 0:
             self.head = self.head.getNextNode() #Deletes the head (index 0)
@@ -66,7 +66,7 @@ class LinkedList(object):
                 count += 1
 
             currentNode.setNextNode(currentNode.getNextNode().getNextNode())
-            self.count -= 1
+            self.nodeCount -= 1
 
     def printList(self):
         '''Prints the whole list'''
@@ -96,10 +96,10 @@ print("Search for 900:", testList.searchList(900))
 print("\nTEST SET 2 --------------------------------\n")
 
 print("Node Count:", testList.getNodeCount())
-print("Search for 45:", testList.searchList(12))
+print("Search for 12:", testList.searchList(12))
 print("Attempting to delete 12 at index 2")
 testList.deleteAt(2)
 print("Node Count:", testList.getNodeCount())
-print("Search for 45:", testList.searchList(12))
+print("Search for 12:", testList.searchList(12))
 testList.printList()
 
