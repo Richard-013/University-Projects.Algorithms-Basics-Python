@@ -40,15 +40,11 @@ class LinkedList(object):
     def searchList(self, target):
         '''Searches the list for a target value'''
         currentNode = self.head
-
-        while(True):
-            if currentNode.getValue != target:
-                if currentNode.getNextNode() == None:
-                    break
-                else:
-                    currentNode = currentNode.getNextNode()
-            else:
+        while(currentNode != None):
+            if currentNode.getValue() == target:
                 return currentNode
+            else:
+                currentNode = currentNode.getNextNode()
 
         return None
 
