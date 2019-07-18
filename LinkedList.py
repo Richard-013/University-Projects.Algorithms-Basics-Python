@@ -35,6 +35,7 @@ class LinkedList(object):
         newNode = Node(data)
         newNode.setNextNode(self.head)
         self.head = newNode
+        self.nodeCount += 1
 
     def searchList(self, target):
         '''Searches the list for a target value'''
