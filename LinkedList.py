@@ -5,10 +5,10 @@ class Node(object):
         self.value = value
         self.nextNode = None
 
-    def getData(self):
+    def getValue(self):
         return self.value
 
-    def setData(self, newValue):
+    def setValue(self, newValue):
         self.value = newValue
 
     def getNextNode(self):
@@ -32,6 +32,15 @@ class LinkedList(object):
 
     def searchList(self, target):
         currentNode = self.head
+
+        while(True):
+            if currentNode.getValue != target:
+                if currentNode.getNextNode() == None:
+                    break
+                else:
+                    currentNode = currentNode.getNextNode()
+            else:
+                return currentNode
 
         return None
 
