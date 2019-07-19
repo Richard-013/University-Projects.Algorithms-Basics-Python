@@ -18,12 +18,12 @@ class Queue:
     def __init__(self):
         self.queue = list()
 
-    def push(self, item):
+    def enqueue(self, item):
         '''Pushes the given item to the back of the queue'''
         self.queue.append(item)
 
-    def pop(self):
-        '''Pops the item at the front of the queue'''
+    def dequeue(self):
+        '''Removes the item at the front of the queue'''
         return self.queue.pop(0)
 
     def printQueue(self):
@@ -46,13 +46,13 @@ print("\n------------------------------")
 print("\nTEST: QUEUE\n")
 
 testQueue = Queue()
-testQueue.push(87)
-testQueue.push(43)
-testQueue.push(13)
-testQueue.push(98)
-testQueue.push(57)
+testQueue.enqueue(87)
+testQueue.enqueue(43)
+testQueue.enqueue(13)
+testQueue.enqueue(98)
+testQueue.enqueue(57)
 
 testQueue.printQueue()
-print("\nExpected: 87  ---  Actual:", testQueue.pop())
-print("Expected: 43  ---  Actual:", testQueue.pop())
+print("\nExpected: 87  ---  Actual:", testQueue.dequeue())
+print("Expected: 43  ---  Actual:", testQueue.dequeue())
 
