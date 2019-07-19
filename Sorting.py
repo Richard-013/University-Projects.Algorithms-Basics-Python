@@ -53,7 +53,6 @@ def mergeSort(data):
             rightIndex += 1
             mergeIndex += 1
 
-        print(data)
         return data
         
 
