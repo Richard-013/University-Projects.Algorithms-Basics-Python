@@ -10,6 +10,9 @@ class Stack:
         '''Pops the item at the top of the stack'''
         return self.stack.pop(len(self.stack) - 1)
 
+    def printStack(self):
+        for item in self.stack:
+            print(item)
 
 class Queue:
     def __init__(self):
@@ -22,4 +25,8 @@ class Queue:
     def pop(self):
         '''Pops the item at the front of the queue'''
         return self.queue.pop(0)
+
+    def printQueue(self):
+        for item in self.queue:
+            print(item)
 
