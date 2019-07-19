@@ -13,13 +13,13 @@ class Stack:
 
 class Queue:
     def __init__(self):
-        pass()
+        self.queue = list()
 
-    def push(self):
+    def push(self, item):
         '''Pushes the given item to the back of the queue'''
-        pass()
+        self.queue.append(item)
 
     def pop(self):
         '''Pops the item at the front of the queue'''
-        pass()
-    
+        return self.queue.pop(0)
+
