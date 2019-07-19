@@ -15,6 +15,7 @@ def bubbleSort(data):
 
     return data
 
+
 def mergeSort(data):
     '''Sorts a list of elements using merge sort algorithm'''
     if len(data) > 1:
@@ -56,7 +57,11 @@ def mergeSort(data):
         return data
         
 
-def quickSort():
+def quickSort(data, start, end):
+    '''Sorts a list using the quick sort algorithm'''
+    pass
+
+def partition():
     pass
 
 inputData = [3, 8, 42, 9, 31, 12, 25]
