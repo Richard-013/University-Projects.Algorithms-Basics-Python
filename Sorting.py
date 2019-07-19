@@ -1,6 +1,7 @@
 def bubbleSort(data):
-    for i in range(len(data), -1, -1):
-        for j in range(i - 1):
+    '''Sorts a list of elements using the bubble sort algorithm'''
+    for i in range(len(data), -1, -1): #Loop controlling the point to compare up to
+        for j in range(i - 1): #Loop comparing values in the list
             print("COMP:", j, end=' ')
             if data[j] > data[j+1]:
                 temp = data[j+1]
