@@ -1,14 +1,15 @@
 class Stack:
     def __init__(self):
-        pass()
+        self.stack = list()
 
-    def push(self):
+    def push(self, item):
         '''Pushes the given item to the top of the stack'''
-        pass()
+        self.stack.append(item)
         
     def pop(self):
         '''Pops the item at the top of the stack'''
-        pass()
+        return self.stack.pop(len(self.stack) - 1)
+
 
 class Queue:
     def __init__(self):
