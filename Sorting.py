@@ -19,3 +19,7 @@ def mergeSort():
 def quickSort():
     pass
 
+inputData = [3, 8, 42, 9, 31, 12, 25]
+print(inputData)
+print(bubbleSort(inputData))
+
