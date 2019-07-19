@@ -10,6 +10,7 @@ def bubbleSort(data):
             else:
                 print("NOT SWAPPED")
                 continue
+        print(data)
 
     return data
 
