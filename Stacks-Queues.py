@@ -30,3 +30,29 @@ class Queue:
         for item in self.queue:
             print(item)
 
+print("TEST: STACK\n")
+
+testStack = Stack()
+testStack.push(87)
+testStack.push(43)
+testStack.push(13)
+testStack.push(98)
+testStack.push(57)
+
+testStack.printStack()
+print("\nExpected: 57  ---  Actual:", testStack.pop())
+print("Expected: 98  ---  Actual:", testStack.pop())
+print("\n------------------------------")
+print("\nTEST: QUEUE\n")
+
+testQueue = Queue()
+testQueue.push(87)
+testQueue.push(43)
+testQueue.push(13)
+testQueue.push(98)
+testQueue.push(57)
+
+testQueue.printQueue()
+print("\nExpected: 87  ---  Actual:", testQueue.pop())
+print("Expected: 43  ---  Actual:", testQueue.pop())
+
