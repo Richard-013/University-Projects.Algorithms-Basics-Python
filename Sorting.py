@@ -101,6 +101,8 @@ def partition(data, start, end):
 
 inputData = [3, 8, 42, 9, 31, 12, 25]
 print(inputData)
-#print(bubbleSort(inputData))
-print(mergeSort(inputData))
+#bubbleSort(inputData)
+#mergeSort(inputData)
+quickSort(inputData, 0, len(inputData) - 1)
+print(inputData)
 
