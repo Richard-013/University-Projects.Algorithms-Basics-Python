@@ -33,6 +33,12 @@ def binarySearch(target, data):
 
     return None
     
+def checkSorted(data):
+    for i in range(1, len(data) - 1):
+        if data[i] < data[i - 1]:
+            return False
+
+    return True
 
 inputData = [43, 67, 12, 34, 76, 4, 19, 7, 200, 38]
 sortedData = [1, 5, 7, 34, 41, 49, 67, 89, 102, 432]
@@ -55,3 +61,7 @@ print("-------")
 print(binarySearch(1, sortedData))
 print(binarySearch(89, sortedData))
 print(binarySearch(42, sortedData))
+
+print("-------")
+print(checkSorted(inputData))
+print(checkSorted(sortedData))
