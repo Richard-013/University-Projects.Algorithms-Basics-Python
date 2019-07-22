@@ -23,7 +23,7 @@ def binarySearch(target, data):
 
     while start <= end:
         #Calculates midpoint within the list
-        midpoint = start + ((end - start) // 2)
+        midpoint = (start + end) // 2
         if data[midpoint] == target:
             return data[midpoint]
         elif data[midpoint] < target:
