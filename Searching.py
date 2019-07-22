@@ -15,6 +15,25 @@ def linearSearchBool(target, data):
 
     return False
 
+def binarySearch(target, data):
+    '''Iterative binary search to find item in sorted list and
+       return its value'''
+    start = 0
+    end = len(data) - 1
+
+    while start <= end:
+        #Calculates midpoint within the list
+        midpoint = start + ((end - start) // 2)
+        if data[midpoint] == target:
+            return data[midpoint]
+        elif data[midpoint] < target:
+            start = midpoint + 1
+        else:
+            end = midpoint - 1
+
+    return None
+    
+
 inputData = [43, 67, 12, 34, 76, 4, 19, 7, 200, 38]
 
 #Linear Search Test
