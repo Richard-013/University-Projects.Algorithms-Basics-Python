@@ -69,6 +69,7 @@ def quickSort(data, start, end):
 
 def partition(data, start, end):
     '''Partition function for quick sort'''
+    #Uses the first item as the pivot
     pivotValue = data[start]
 
     lowIndex = start + 1
@@ -92,6 +93,7 @@ def partition(data, start, end):
             data[lowIndex] = data[highIndex]
             data[highIndex] = temp
 
+    #Swaps the pivotValue and high Index to split the list
     temp = data[start]
     data[start] = data[highIndex]
     data[highIndex] = temp
