@@ -59,10 +59,45 @@ def mergeSort(data):
 
 def quickSort(data, start, end):
     '''Sorts a list using the quick sort algorithm'''
-    pass
+    if start < end:
+        #Finds the split point
+        pivotIndex = partition(data, start, end)
 
-def partition():
-    pass
+        #Sorts the two halves of the dataset
+        quickSort(data, start, pivotIndex - 1)
+        quickSort(data, pivotIndex + 1, end)
+
+def partition(data, start, end):
+    '''Partition function for quick sort'''
+    pivotValue = data[start]
+
+    lowIndex = start + 1
+    highIndex = end
+
+    while True:
+        #Increments the low index
+        while lowIndex <= highIndex and data[lowIndex] <= pivotValue:
+            lowIndex += 1
+
+        #Decrements the high index
+        while highIndex >= lowIndex and data[highIndex] >= pivotValue:
+            highIndex -= 1
+
+        if highIndex < lowIndex:
+            #Ends the loop if the indexes cross
+            break
+        else:
+            #Swaps data around then allows the loop to run again
+            temp = data[lowIndex]
+            data[lowIndex] = data[highIndex]
+            data[highIndex] = temp
+
+    temp = data[start]
+    data[start] = data[highIndex]
+    data[highIndex] = temp
+
+    return highIndex
+        
 
 inputData = [3, 8, 42, 9, 31, 12, 25]
 print(inputData)
