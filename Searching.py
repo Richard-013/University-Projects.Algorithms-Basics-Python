@@ -1,4 +1,5 @@
 def linearSearch(target, data):
+    '''Linear search that returns the item desired'''
     for item in data:
         if item == target:
             return item
@@ -6,6 +7,8 @@ def linearSearch(target, data):
     return None
 
 def linearSearchBool(target, data):
+    '''Linear search that returns true or false depending on
+       if the item is present in the list or not'''
     for item in data:
         if item == target:
             return True
